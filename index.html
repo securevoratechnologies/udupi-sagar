@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udupi Sagar · A Taste of Tradition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- ========== HEADER / STICKY NAV ========== -->
+    <header class="site-header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Udupi Sagar home">
+                <span class="logo-main">Udupi Sagar</span>
+                <span class="logo-sub">since tradition</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#story" class="nav-link">Our Story</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-outline nav-btn" id="reserveBtn" style="border-color: var(--forest); color: var(--forest);">Reserve</button>
+                    <button class="btn btn-nav-cta" id="openCartBtn">
+                        <i class="fas fa-shopping-bag"></i> Order <span id="cartCount" class="cart-badge">0</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <img class="hero-img" src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=1974&auto=format&fit=crop" alt="Traditional South Indian thali">
+            <div class="container hero-content">
+                <h1 class="hero-title">A Taste of Tradition,<br> Served with Love.</h1>
+                <p class="hero-text">Authentic Udupi-inspired South Indian cuisine, crafted with fresh ingredients and generations of hospitality.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                    <a href="#story" class="btn btn-outline">Discover Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== OUR STORY ========== -->
+        <section id="story" class="section story-section">
+            <div class="container story-grid">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=1770&auto=format&fit=crop" alt="Warm interior of a traditional Indian restaurant">
+                </div>
+                <div class="story-text">
+                    <span class="section-tag">Our Heritage</span>
+                    <h2 class="section-title">Rooted in Udupi,<br> Made for Today</h2>
+                    <p>Udupi Sagar is a heartfelt tribute to the coastal culinary traditions of Karnataka. Our kitchen embraces the simplicity of fresh ingredients, the warmth of homemade spices, and the joy of sharing a meal.</p>
+                    <p>Every dish is prepared with care — from our crisp dosas to our slow-simmered sambar. We believe in honest food, warm smiles, and the kind of hospitality that makes you feel at home.</p>
+                    <div class="story-signature">— The Udupi Sagar Family</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SIGNATURE DISHES ========== -->
+        <section id="signature" class="section signature-section">
+            <div class="container">
+                <span class="section-tag center">Culinary Favourites</span>
+                <h2 class="section-title center">Signature Dishes</h2>
+                <div class="signature-grid" id="signatureGrid"></div>
+            </div>
+        </section>
+
+        <!-- ========== MENU (with filters) ========== -->
+        <section id="menu" class="section menu-section">
+            <div class="container">
+                <span class="section-tag center">Explore</span>
+                <h2 class="section-title center">Our Menu</h2>
+                <div class="menu-filters" id="menuFilters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                    <button class="filter-btn" data-filter="dosa">Dosa Specials</button>
+                    <button class="filter-btn" data-filter="meals">South Indian Meals</button>
+                    <button class="filter-btn" data-filter="snacks">Snacks</button>
+                    <button class="filter-btn" data-filter="beverages">Beverages</button>
+                </div>
+                <div class="menu-grid" id="menuGrid"></div>
+            </div>
+        </section>
+
+        <!-- ========== WHY CHOOSE US ========== -->
+        <section class="section why-section">
+            <div class="container">
+                <span class="section-tag center">The Udupi Sagar Difference</span>
+                <h2 class="section-title center">Why Choose Us</h2>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <i class="fas fa-leaf why-icon"></i>
+                        <h3>Authentic Flavours</h3>
+                        <p>Inspired by Udupi kitchens, our recipes stay true to tradition.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-seedling why-icon"></i>
+                        <h3>Freshly Prepared</h3>
+                        <p>Every dish is made to order with fresh, local ingredients.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-hand-holding-heart why-icon"></i>
+                        <h3>Traditional Hospitality</h3>
+                        <p>Warm service that reflects the spirit of South Indian hospitality.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-users why-icon"></i>
+                        <h3>Family-Friendly</h3>
+                        <p>A welcoming atmosphere for gatherings big and small.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== GALLERY ========== -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <span class="section-tag center">Moments</span>
+                <h2 class="section-title center">Gallery</h2>
+                <div class="gallery-grid" id="galleryGrid">
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=800&auto=format&fit=crop" alt="South Indian thali spread"></figure>
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=800&auto=format&fit=crop" alt="Restaurant interior with warm lighting"></figure>
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&w=800&auto=format&fit=crop" alt="Crispy masala dosa with chutney"></figure>
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop" alt="Idli and vada served on banana leaf"></figure>
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop" alt="Cozy restaurant table setting"></figure>
+                    <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Traditional filter coffee in steel tumbler"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TESTIMONIALS ========== -->
+        <section class="section testimonial-section">
+            <div class="container">
+                <span class="section-tag center">Kind Words</span>
+                <h2 class="section-title center">What Guests Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">“The ghee roast dosa is pure magic — crisp, rich, and full of flavour. A new family favourite!”</p>
+                        <span class="testimonial-author">— Anjali R.</span>
+                        <span class="testimonial-note">Placeholder testimonial</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">“Warm, welcoming, and the filter coffee is spot on. It feels like a little piece of Udupi in the city.”</p>
+                        <span class="testimonial-author">— Vikram S.</span>
+                        <span class="testimonial-note">Placeholder testimonial</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">“We celebrated a family lunch here — the thali was generous, fresh, and beautifully served.”</p>
+                        <span class="testimonial-author">— Meera K.</span>
+                        <span class="testimonial-note">Placeholder testimonial</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LOCATION & HOURS ========== -->
+        <section id="contact" class="section location-section">
+            <div class="container location-grid">
+                <div class="location-info">
+                    <span class="section-tag">Visit Us</span>
+                    <h2 class="section-title">Find Us</h2>
+                    <p><i class="fas fa-map-pin"></i> 12, Temple Street, Heritage Quarter,<br>Bengaluru 560001 (placeholder)</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 80 1234 5678 (placeholder)</p>
+                    <p><i class="fas fa-clock"></i> Mon–Sun: 7:00 AM – 10:30 PM</p>
+                    <a href="#" class="btn btn-primary" id="directionsBtn" role="button">Get Directions</a>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="form-feedback" id="formFeedback" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="logo-main">Udupi Sagar</span>
+                <p>Authentic South Indian flavours, served with warmth and tradition.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>12, Temple Street, Heritage Quarter, Bengaluru 560001</p>
+                <p>+91 80 1234 5678</p>
+                <p>hello@udupisagar.com (placeholder)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Udupi Sagar. All rights reserved. A fictional restaurant concept.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged gallery image">
+    </div>
+
+    <!-- ========== CART MODAL ========== -->
+    <div id="cartModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="modal-close" id="closeCartBtn" aria-label="Close cart">&times;</span>
+            <h2 class="modal-title">Your Order</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items populate here -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">₹0</span>
+            </div>
+            <button class="btn btn-primary w-full" id="checkoutBtn">Proceed to Checkout</button>
+            <p class="demo-note">* This is a fictional ordering system for demonstration.</p>
+        </div>
+    </div>
+
+    <!-- ========== CHECKOUT MODAL ========== -->
+    <div id="checkoutModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="modal-close" id="closeCheckoutBtn" aria-label="Close checkout">&times;</span>
+            <h2 class="modal-title">Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="checkoutName">Name</label>
+                    <input type="text" id="checkoutName" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="checkoutPhone">Phone</label>
+                    <input type="tel" id="checkoutPhone" required placeholder="Your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="checkoutAddress">Address</label>
+                    <textarea id="checkoutAddress" rows="2" required placeholder="Delivery address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutPayment">Payment Method</label>
+                    <select id="checkoutPayment" required>
+                        <option value="cod">Cash on Delivery</option>
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Place Order</button>
+                <p class="form-feedback" id="checkoutFeedback" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== RESERVATION MODAL ========== -->
+    <div id="reserveModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="modal-close" id="closeReserveBtn" aria-label="Close reservation">&times;</span>
+            <h2 class="modal-title">Reserve a Table</h2>
+            <form id="reserveForm">
+                <div class="form-group">
+                    <label for="resName">Name</label>
+                    <input type="text" id="resName" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="resPhone">Phone</label>
+                    <input type="tel" id="resPhone" required placeholder="Your phone number">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resDate">Date</label>
+                        <input type="date" id="resDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="resTime">Time</label>
+                        <input type="time" id="resTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="resGuests">Guests</label>
+                    <select id="resGuests" required>
+                        <option value="1">1 Person</option>
+                        <option value="2" selected>2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6+ People</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Confirm Reservation</button>
+                <p class="form-feedback" id="reserveFeedback" role="status"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
